@@ -189,7 +189,7 @@ INSTANTIATE_TEST_CASE_P(ConstantSubstitutionTest, ExpressionSubstitutionTest, ::
                             InputOutputPair{"false",             "false"}
                             ));
 
-INSTANTIATE_TEST_CASE_P(LogicalExpressionTest, ExpressionSubstitutionTest, ::testing::Values(
+INSTANTIATE_TEST_CASE_P(LogicalExpressionTest, LogicalExprTest, ::testing::Values(
                             InputOutputPair{"true",            "true"},
                             InputOutputPair{"1 == 1",            "true"},
                             InputOutputPair{"1 != 1",            "false"},
