@@ -214,7 +214,7 @@ struct FormatArgumentConverter : visitors::BaseVisitor<FormatArgument>
     template<typename T>
     result_t make_result(const T& t) const
     {
-        return fmt::internal::make_arg<FormatContext>(m_decorator(t));
+        return fmt::detail::make_arg<FormatContext>(m_decorator(t));
     }
 
     const RenderContext* m_context;
@@ -222,7 +222,7 @@ struct FormatArgumentConverter : visitors::BaseVisitor<FormatArgument>
 };
 
 template<typename T>
-using NamedArgument = fmt::internal::named_arg<T, char>;
+using NamedArgument = fmt::detail::named_arg<T, char>;
 
 using ValueHandle =
   nonstd::variant<bool, std::string, int64_t, double, NamedArgument<bool>, NamedArgument<std::string>, NamedArgument<int64_t>, NamedArgument<double>>;
