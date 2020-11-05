@@ -23,7 +23,7 @@ option(JINJA2CPP_PIC "Control -fPIC option for library build" OFF)
 option(JINJA2CPP_VERBOSE "Add extra debug output to the build scripts" OFF)
 
 if (DEFINED BUILD_SHARED_LIBS)
-    set(JINJA2CPP_BUILD_SHARED BUILD_SHARED_LIBS)
+    set(JINJA2CPP_BUILD_SHARED ${BUILD_SHARED_LIBS})
 endif ()
 
 if (JINJA2CPP_BUILD_SHARED)
